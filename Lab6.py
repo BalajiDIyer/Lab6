@@ -15,15 +15,15 @@ print(encode(pw))
 
 
 
-def decode(encoded):
-    password = ""
-    for x in range (0, len(encoded)):
-        if encoded[x]== "2":
-            password += "9"
-        elif encoded[x] == "1":
-            password += "8"
-        elif encoded[x] == "0":
-            password += "7"
+def decode(epw):
+    pw = ""
+    for x in range (0, len(epw)):
+        if epw[x]== "2":
+            pw += "9"
+        elif epw[x] == "1":
+            pw += "8"
+        elif epw[x] == "0":
+            pw += "7"
         else:
-            password += str(int(encoded[x]) - 3)
-    return password
+            pw += str(int(epw[x]) - 3)
+    return pw
